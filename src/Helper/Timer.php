@@ -63,7 +63,7 @@ class Timer
             throw new NotStoppedException();
         }
 
-        return $this->toMicro($this->stoppedOn - $this->startedOn);
+        return ($this->stoppedOn - $this->startedOn);
     }
 
     /**

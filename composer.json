@@ -1,5 +1,5 @@
 {
-    "name" : "philkra/elastic-apm-php-agent",
+    "name" : "the-revenant-star/elastic-apm-php-agent",
     "description": "A php agent for Elastic APM",
     "license": "MIT",
     "require" : {
@@ -8,6 +8,9 @@
         "ramsey/uuid": "^3.7",
         "ralouphie/getallheaders": "2.0.5",
         "ext-curl" : "*"
+    },
+    "replace": {
+      "philkra/elastic-apm-php-agent":"*"
     },
     "require-dev" : {
         "phpunit/phpunit" : "6.*"
@@ -37,6 +40,10 @@
         {
             "name" : "George Boot",
             "email": "george@entryninja.com"
+        },
+        {
+            "name" : "TheRevenantStar",
+            "email": "smtgr15@gmail.com"
         }
     ]
 }
