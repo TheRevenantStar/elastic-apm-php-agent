@@ -32,10 +32,10 @@ class Connector
     /**
      * @param \PhilKra\Helper\Config $config
      */
-    public function __construct(\PhilKra\Helper\Config $config)
+    public function __construct(\PhilKra\Helper\Config $config, $timeout)
     {
         $this->config = $config;
-        $this->client = new Client();
+        $this->client = new Client(["timeout"=>$timeout]);
     }
 
     /**

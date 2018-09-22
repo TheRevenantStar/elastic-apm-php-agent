@@ -118,7 +118,7 @@ class Agent
         // Start the Transaction
         $transaction = $this->transactionsStore->fetch($name);
         $transaction->start();
-    
+
         return $transaction;
     }
 
@@ -186,14 +186,14 @@ class Agent
      *
      * @return bool
      */
-    public function send() : bool
+    public function send($timeout = 0) : bool
     {
         // Is the Agent enabled ?
         if ($this->config->get('active') === false) {
             return false;
         }
 
-        $connector = new Connector($this->config);
+        $connector = new Connector($this->config, $timeout);
         $status = true;
 
         // Commit the Errors
